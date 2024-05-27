@@ -1,15 +1,16 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "./Pages";
+import { NavBody, SearchBar } from "./Pages";
 
-import React from 'react'
 
 function Layout() {
   return (
     <>
-    <Header/>
-    <Outlet/>
+      <NavBody />
+      <SearchBar />
+
+      <Outlet />
     </>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

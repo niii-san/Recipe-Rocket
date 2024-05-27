@@ -12,7 +12,8 @@ export default {
 
       colors: {
         bodyBg: "#141619",
-        Blue: "#0A21C0",
+        Second: "#3E54AC ",
+        Third:"#AED2FF",
         Text: "#F6F5F5",
       },
     },

@@ -28,7 +28,7 @@ function NavBar() {
 
   return (
     <div className=" container  w-full  flex justify-center  ">
-      <ul className="py-5 text-sm flex justify-center w-full  gap-3 bg-[#3E54AC] rounded-xl tablet:w-auto tablet:px-10 tablet:text-base tablet:gap-6">
+      <ul className="py-5 text-sm flex justify-center w-full  gap-3 bg-Second rounded-xl tablet:w-auto tablet:px-10 tablet:text-base tablet:gap-6">
         {navItems.map((item) => (
           <li
             key={item.id}
@@ -39,7 +39,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive
                   ? " px-3 py-1.5 bg-[#000000] rounded-xl transition duration-300 ease-in-out transform scale-110 tablet:px-6 tablet:py-2 "
-                  : " px-3 py-1.5 bg-[#AED2FF] text-black rounded-xl transition duration-300 ease-in-out transform scale-100 tablet:px-6 tablet:py-2"
+                  : " px-3 py-1.5 bg-Third text-black rounded-xl transition duration-300 ease-in-out transform scale-100 tablet:px-6 tablet:py-2"
               }
             >
               {item.element}
