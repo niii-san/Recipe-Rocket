@@ -1,4 +1,4 @@
-import Header from "./Header/Header";
+import Header from "./NavBar/NavBody";
 import Home from "./Pages/Home";
 import Categories from "./Pages/Categories";
 import Recipes from "./Pages/Recipes";

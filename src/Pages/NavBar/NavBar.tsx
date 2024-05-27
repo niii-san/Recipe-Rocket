@@ -26,18 +26,20 @@ function NavBar() {
     },
   ];
 
-  const defaultStyling: string =
-    "w-full h-full bg-green-200 flex items-center justify-center";
-
   return (
-    <header className="bg-slate-500 h-20 w-full">
-      <ul className="w-full flex gap-10">
+    <div className="  w-full  flex justify-center  ">
+      <ul className="py-5 text-sm flex justify-center w-full gap-3 bg-[#3E54AC] rounded-xl ">
         {navItems.map((item) => (
-          <li key={item.id} className="cursor-pointer h-20 w-20 bg-red-200">
+          <li
+            key={item.id}
+            className="cursor-pointer h-full flex items-center   text-Text "
+          >
             <NavLink
               to={`${item.path}`}
               className={({ isActive }) =>
-                isActive ? `${defaultStyling} bg-red-300` : `${defaultStyling}`
+                isActive
+                  ? " px-3 py-1.5 bg-[#000000] rounded-xl transition duration-300 ease-in-out transform scale-110"
+                  : " px-3 py-1.5 bg-[#AED2FF] text-black rounded-xl transition duration-300 ease-in-out transform scale-100"
               }
             >
               {item.element}
@@ -45,7 +47,7 @@ function NavBar() {
           </li>
         ))}
       </ul>
-    </header>
+    </div>
   );
 }
 
