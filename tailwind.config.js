@@ -2,11 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screens: {
-      'pc': '1100px',
-      // => @media (min-width: 1280px) { ... }
-    },
     extend: {
+      screens: {
+        pc: "1100px",
+        // => @media (min-width: 1280px) { ... }
+        tablet: "600px",
+        // => @media (min-width: 640px) { ... }
+      },
+
       colors: {
         bodyBg: "#141619",
         Blue: "#0A21C0",

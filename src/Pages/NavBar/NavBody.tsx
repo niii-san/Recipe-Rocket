@@ -2,7 +2,7 @@ import NavBar from "./NavBar";
 
 function NavBody() {
   return (
-    <div className=" flex items-center justify-center  fixed bottom-2 w-screen">
+    <div className=" container flex items-center justify-center  fixed bottom-2 w-full mx-auto">
       <NavBar />
     </div>
   );
