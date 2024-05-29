@@ -48,7 +48,7 @@ function Home() {
         <div id="title" className="text-3xl border-b border-Second">
           Some Indian meals
         </div>
-        <div id="meals" className="flex flex-col items-center gap-y-5 py-5">
+        <div id="meals" className="flex flex-col items-center gap-y-5 py-5 tablet:flex-row tablet:flex-wrap tablet:justify-evenly tablet:gap-x-4">
           {indianMeals.map((meal) => (
             <FoodCard meal={meal} />
           ))}
