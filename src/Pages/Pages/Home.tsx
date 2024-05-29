@@ -1,17 +1,28 @@
 import { Typewriter } from "react-simple-typewriter";
 import Block from "../../Components/Block";
 import { useEffect, useState } from "react";
-import type { Meal } from "../../Types";
+import type { Meal, MealCard } from "../../Types";
+import FoodCard from "../../Components/FoodCard";
 
 function Home() {
   const [randomMeal, setRandomMeal] = useState<Meal | null>(null);
-  console.log(randomMeal);
+
+  const [indianMeals, setIndianMeals] = useState<MealCard[] | []>([]);
+  console.log(indianMeals);
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/random.php")
       .then((res) => res.json())
       .then((data) => {
         setRandomMeal(data.meals[0]);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian")
+      .then((res) => res.json())
+      .then((data) => {
+        setIndianMeals(data.meals);
       });
   }, []);
 
@@ -31,6 +42,16 @@ function Home() {
         </div>
         <div>
           <Block meal={randomMeal} />
+        </div>
+      </div>
+      <div id="someMeals" className="mt-8">
+        <div id="title" className="text-3xl border-b border-Second">
+          Some Indian meals
+        </div>
+        <div id="meals" className="flex flex-col items-center gap-y-5 py-5">
+          {indianMeals.map((meal) => (
+            <FoodCard meal={meal} />
+          ))}
         </div>
       </div>
     </div>

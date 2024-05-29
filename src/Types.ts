@@ -52,3 +52,9 @@ export interface Meal {
   strCreativeCommonsConfirmed: string | null;
   dateModified: string | null;
 }
+
+export interface MealCard{
+  strMeal:string,
+  strMealThumb:string,
+  idMeal:string
+}
