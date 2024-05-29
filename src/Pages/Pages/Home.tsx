@@ -8,7 +8,9 @@ function Home() {
   const [randomMeal, setRandomMeal] = useState<Meal | null>(null);
 
   const [indianMeals, setIndianMeals] = useState<MealCard[] | []>([]);
-  console.log(indianMeals);
+
+  const [reloadRand, setReloadRand] = useState<boolean>(false);
+
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/random.php")
@@ -16,7 +18,7 @@ function Home() {
       .then((data) => {
         setRandomMeal(data.meals[0]);
       });
-  }, []);
+  }, [reloadRand]);
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian")
@@ -41,16 +43,19 @@ function Home() {
           />
         </div>
         <div>
-          <Block meal={randomMeal} />
+          <Block meal={randomMeal} next={true} nextOnClick={setReloadRand} />
         </div>
       </div>
       <div id="someMeals" className="mt-8">
         <div id="title" className="text-3xl border-b border-Second">
           Some Indian meals
         </div>
-        <div id="meals" className="flex flex-col items-center gap-y-5 py-5 tablet:flex-row tablet:flex-wrap tablet:justify-evenly tablet:gap-x-4">
+        <div
+          id="meals"
+          className="flex flex-col items-center gap-y-5 py-5 tablet:flex-row tablet:flex-wrap tablet:justify-evenly tablet:gap-x-4"
+        >
           {indianMeals.map((meal) => (
-            <FoodCard meal={meal} />
+            <FoodCard key={meal.idMeal} meal={meal} />
           ))}
         </div>
       </div>
