@@ -1,4 +1,5 @@
 import type { Meal } from "../Types";
+import { MdNavigateNext } from "react-icons/md";
 
 function Block({
   meal,
@@ -13,7 +14,7 @@ function Block({
     "border-2 border-bodyBg px-5 py-1 cursor-pointer rounded-lg transition duration-300 ease-in-out transform scale-100  hover:scale-95 hover:border-black hover:border-1 ";
 
   const buttonStyle =
-    "border-2 border-Third rounded-lg text-bodyBg w-[80%] py-1.5 transition duration-300 ease-in-out transform scale-100  hover:scale-90 hover:bg-bodyBg hover:border-1 hover:text-black active:scale-75  active:border-green-400 ";
+    "border-2 border-Third rounded-lg text-bodyBg  py-1.5 transition duration-300 ease-in-out transform scale-100  hover:scale-90 hover:bg-bodyBg hover:border-1 hover:text-black active:scale-75  active:border-green-400 ";
 
   if (!meal) {
     return (
@@ -54,11 +55,11 @@ function Block({
           <span>{meal.strMeal}</span>
         </div>
         <div id="letHimCook" className=" w-full my-4 flex gap-x-2">
-          <button className={buttonStyle}>Cook</button>
+          <button className={`${buttonStyle} w-[80%]`}>Cook</button>
 
           {next ? (
             <button
-              className={`${buttonStyle} w-20`}
+              className={`${buttonStyle} w-20 flex justify-center`}
               onClick={() => {
                 if (next) {
                   nextOnClick((prev: boolean) => !prev);
@@ -67,7 +68,7 @@ function Block({
                 }
               }}
             >
-              Next
+              Next <MdNavigateNext className="w-6 h-6 " />
             </button>
           ) : null}
         </div>
