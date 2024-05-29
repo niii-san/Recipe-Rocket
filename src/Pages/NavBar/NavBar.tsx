@@ -38,8 +38,8 @@ function NavBar() {
               to={`${item.path}`}
               className={({ isActive }) =>
                 isActive
-                  ? " px-3 py-1.5 bg-[#000000] rounded-xl transition duration-300 ease-in-out transform scale-110 tablet:px-6 tablet:py-2 "
-                  : " px-3 py-1.5 bg-Third text-black rounded-xl transition duration-300 ease-in-out transform scale-95 tablet:px-6 tablet:py-2 hover:scale-75"
+                  ? " px-3 py-1.5 bg-bodyBg rounded-xl transition duration-300 ease-in-out transform scale-110 tablet:px-6 tablet:py-2 hover:text-Second "
+                  : " px-3 py-1.5 bg-Third text-black rounded-xl transition duration-300 ease-in-out transform scale-95 tablet:px-6 tablet:py-2 hover:scale-75 hover:bg-bodyBg  "
               }
             >
               {item.element}

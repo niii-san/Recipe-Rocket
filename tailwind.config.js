@@ -9,6 +9,10 @@ export default {
         tablet: "600px",
         // => @media (min-width: 640px) { ... }
       },
+      fontFamily:{
+        f1:["Overlock", "sans-serif"]
+
+      },
 
       // 9EB23B
       colors: {

@@ -16,11 +16,11 @@ function Home() {
   }, []);
 
   return (
-    <div className="h-[1200px] w-full bg-bodyBg">
-      <div id="confused" className="flex flex-col items-center">
+    <div className="min-h-[800px] w-full bg-bodyBg">
+      <div id="confused" className="flex flex-col items-center ">
         <div
           id="text"
-          className="w-full text-3xl text-black px-4 font-thin italic"
+          className="h-[80px]  w-full text-3xl text-black px-4 font-thin italic mt-10 max-w-[550px] "
         >
           Confused?{" "}
           <Typewriter

@@ -16,7 +16,7 @@ function SearchBar() {
           />
           <button
             type="submit"
-            className="border-l rounded-r-lg border-Third text-white h-full w-[20%] flex justify-center items-center transition duration-300 ease-in-out transform hover:bg-bodyBg hover:border hover:scale-105 active:scale-75"
+            className="border-l rounded-r-lg border-Third text-white h-full w-[20%] flex justify-center items-center transition duration-300 ease-in-out transform hover:bg-bodyBg hover:border hover:border-black hover:scale-105 active:scale-75"
           >
             <FaSearch className="h-5 w-5" />
           </button>
