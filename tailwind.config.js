@@ -10,10 +10,11 @@ export default {
         // => @media (min-width: 640px) { ... }
       },
 
+      // 9EB23B
       colors: {
-        bodyBg: "#141619",
-        Second: "#3E54AC ",
-        Third:"#AED2FF",
+        bodyBg: "#FFB000",
+        Second: "#1A5D1A ",
+        Third: "#AED2FF",
         Text: "#F6F5F5",
       },
     },
