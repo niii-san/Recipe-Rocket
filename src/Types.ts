@@ -53,8 +53,15 @@ export interface Meal {
   dateModified: string | null;
 }
 
-export interface MealCard{
-  strMeal:string,
-  strMealThumb:string,
-  idMeal:string
+export interface MealCard {
+  strMeal: string;
+  strMealThumb: string;
+  idMeal: string;
+}
+
+export interface CategoryCard {
+  idCategory: string;
+  strCategory: string;
+  strCategoryThumb: string;
+  strCategoryDescription: string;
 }
