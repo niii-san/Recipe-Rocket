@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollbar-minimal::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.scrollbar-minimal::-webkit-scrollbar-thumb {
+  background-color: #7bff00; /* Red color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.scrollbar-minimal::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+/* Custom minimal red scrollbar for Firefox */
+.scrollbar-minimal {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #52ae39 transparent; /* Red thumb, transparent track */
+}
