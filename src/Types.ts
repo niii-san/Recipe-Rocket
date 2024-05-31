@@ -65,3 +65,7 @@ export interface CategoryCard {
   strCategoryThumb: string;
   strCategoryDescription: string;
 }
+
+export interface Area {
+  strArea: string;
+}

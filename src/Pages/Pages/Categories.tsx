@@ -16,9 +16,8 @@ function Categories() {
 
   return (
     <>
-    <div className="text-4xl  text-center mt-5"> Categories </div>
-      <div className="w-full  flex flex-wrap mt-5  gap-3 justify-center">
-        
+      <div className="text-4xl  text-center mt-5"> Categories </div>
+      <div className="w-full  flex flex-wrap mt-5  gap-3 justify-center pc:gap-">
         {categories.map((item) => (
           <CateCard key={item.idCategory} category={item} />
         ))}

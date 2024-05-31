@@ -4,14 +4,13 @@ export default {
   theme: {
     extend: {
       screens: {
-        pc: "1100px",
+        pc: "1000px",
         // => @media (min-width: 1280px) { ... }
         tablet: "600px",
         // => @media (min-width: 640px) { ... }
       },
-      fontFamily:{
-        f1:["Overlock", "sans-serif"]
-
+      fontFamily: {
+        f1: ["Overlock", "sans-serif"],
       },
 
       // 9EB23B
