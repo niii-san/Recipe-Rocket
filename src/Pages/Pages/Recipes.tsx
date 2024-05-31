@@ -19,7 +19,7 @@ function Recipes() {
       <div id="title" className="text-4xl mt-6 text-center">
         Areas
       </div>
-      <div className="flex flex-col gap-y-6 items-center py-5">
+      <div className="flex flex-col gap-y-6 items-center py-5 tablet:flex-row tablet:flex-wrap tablet:gap-x-6 tablet:justify-center">
         {areas.map((data) => (
           <AreaCard key={data.strArea} area={data} />
         ))}
