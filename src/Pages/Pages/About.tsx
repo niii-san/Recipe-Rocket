@@ -33,6 +33,31 @@ function About() {
           recipe is just a search away!
         </p>
       </div>
+      <div
+        id="api-github"
+        className="bg-Second mt-6 rounded-xl p-5 text-lg text-Text mb-20"
+      >
+        <div>
+          <span>API- </span>
+          <span
+            className="text-sm text-gray-300"
+            onClick={() => window.open("https://www.themealdb.com/api.php")}
+          >
+            https://www.themealdb.com/api.php
+          </span>
+        </div>
+        <div>
+          <span>Github- </span>
+          <span
+            className="text-sm text-gray-300"
+            onClick={() =>
+              window.open("https://github.com/nishan812/Recipe-Rocket")
+            }
+          >
+            https://github.com/nishan812/Recipe-Rocket
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
