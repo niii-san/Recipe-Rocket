@@ -35,12 +35,12 @@ function About() {
       </div>
       <div
         id="api-github"
-        className="bg-Second mt-6 rounded-xl p-5 text-lg text-Text mb-20"
+        className="bg-Second mt-6 rounded-xl p-5 text-lg text-Text mb-20 tablet:text-2xl "
       >
         <div>
           <span>API- </span>
           <span
-            className="text-sm text-gray-300"
+            className="text-sm text-gray-300 tablet:text-lg hover:underline cursor-pointer hover:text-blue-400 "
             onClick={() => window.open("https://www.themealdb.com/api.php")}
           >
             https://www.themealdb.com/api.php
@@ -49,7 +49,7 @@ function About() {
         <div>
           <span>Github- </span>
           <span
-            className="text-sm text-gray-300"
+            className="text-sm text-gray-300 tablet:text-lg hover:underline cursor-pointer hover:text-blue-400 "
             onClick={() =>
               window.open("https://github.com/nishan812/Recipe-Rocket")
             }
