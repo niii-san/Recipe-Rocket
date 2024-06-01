@@ -1,8 +1,18 @@
+import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
+  const navigate = useNavigate();
+
+  const [searchInput, setSearchInput] = useState<string | "">("");
+
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (searchInput) {
+      navigate(`/search/${searchInput}`);
+      setSearchInput("");
+    }
   };
 
   return (
@@ -13,6 +23,10 @@ function SearchBar() {
             type="text"
             className="w-[80%] h-full outline-none text-center bg-transparent text-Text"
             placeholder="Search Recipe"
+            value={searchInput}
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+            }}
           />
           <button
             type="submit"

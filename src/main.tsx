@@ -7,7 +7,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { Home, Categories, Recipes, About } from "./Pages/index.ts";
+import { Home, Categories, Recipes, About, Search } from "./Pages/index.ts";
 import Layout from "./Layout.tsx";
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +16,7 @@ const route = createBrowserRouter(
       <Route path="/categories" element={<Categories />} />
       <Route path="/recipes" element={<Recipes />} />
       <Route path="/about" element={<About />} />
+      <Route path="/search/:item" element={<Search />} />
     </Route>
   )
 );

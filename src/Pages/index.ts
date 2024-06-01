@@ -4,5 +4,6 @@ import Home from "./Pages/Home";
 import Categories from "./Pages/Categories";
 import Recipes from "./Pages/Recipes";
 import About from "./Pages/About";
+import Search from "./Pages/Search";
 
-export { NavBody,SearchBar, Home, Categories, Recipes, About };
+export { NavBody,SearchBar, Home, Categories, Recipes, About,Search };
