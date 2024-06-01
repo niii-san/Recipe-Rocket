@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Meal } from "../../Types";
 import Block from "../../Components/Block";
+import { Triangle } from "react-loader-spinner";
 
 function Search() {
   const { item } = useParams();
@@ -27,9 +28,20 @@ function Search() {
               <Block key={data.idMeal} meal={data} next={false} />
             ))
           ) : (
-            <div className="text-2xl mt-28  tablet:text-3xl">
-              No Results Found for{" "}
-              <span className="text-Second font-bold italic">{item}</span>!
+            <div className="text-2xl mt-28  tablet:text-3xl flex items-center flex-col">
+              <div>
+                No Results Found for{" "}
+                <span className="text-Second font-bold italic">{item}</span>
+              </div>
+              <Triangle
+                visible={true}
+                height="120"
+                width="120"
+                color="#1A5D1A"
+                ariaLabel="triangle-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
             </div>
           )}
         </div>
