@@ -1,10 +1,15 @@
 import type { MealCard } from "../Types";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 function FoodCard({ meal }: { meal: MealCard }) {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="border-2 border-Second rounded-xl  w-[90%] max-w-[500px] h-32 flex justify-between">
+      <div
+        className="border-2 border-Second rounded-xl  w-[90%] max-w-[500px] h-32 flex justify-between cursor-pointer"
+        onClick={() => navigate(`/cook/${meal.idMeal}`)}
+      >
         <div className="h-full flex items-center">
           <div
             id="poster"

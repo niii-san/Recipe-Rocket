@@ -1,5 +1,6 @@
 import type { Meal } from "../Types";
 import { MdNavigateNext } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 function Block({
   meal,
@@ -15,6 +16,8 @@ function Block({
 
   const buttonStyle =
     "border-2 border-Third rounded-lg text-bodyBg  py-1.5 transition duration-300 ease-in-out transform scale-100  hover:scale-90 hover:bg-bodyBg hover:border-1 hover:text-black active:scale-75  active:border-green-400 ";
+
+    const navigate = useNavigate();
 
   if (!meal) {
     return (
@@ -55,7 +58,7 @@ function Block({
           <span>{meal.strMeal}</span>
         </div>
         <div id="letHimCook" className=" w-full my-4 flex gap-x-2">
-          <button className={`${buttonStyle} w-[80%]`}>Cook</button>
+          <button className={`${buttonStyle} w-[80%]`} onClick={()=>navigate(`/cook/${meal.idMeal}`)}>Cook</button>
 
           {next ? (
             <button
