@@ -4,7 +4,6 @@ import AreaCard from "../../Components/AreaCard";
 
 function Recipes() {
   const [areas, SetAreas] = useState<Area[] | []>([]);
-  console.log(areas);
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")

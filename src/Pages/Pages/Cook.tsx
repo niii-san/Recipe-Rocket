@@ -42,9 +42,9 @@ function Cook() {
       <div className="flex flex-col items-center pt-5 w-full pb-72 ">
         <div
           id="title-image-tags"
-          className="flex flex-col items-center bg-Second text-Text rounded-xl "
+          className="flex flex-col items-center bg-Second text-Text rounded-xl min-w-[280px] "
         >
-          <div id="title" className="text-2xl py-2 pl-4">
+          <div id="title" className="text-2xl py-2 px-4">
             {currentMeal?.strMeal}
           </div>
           <div
@@ -81,7 +81,7 @@ function Cook() {
           </div>
           <div
             id="instructionData"
-            className="bg-Second text-Text text-sm border border-Third p-4 rounded-xl max-h-[400px] overflow-y-scroll scrollbar-minimal"
+            className="bg-Second text-Text text-sm border border-Third p-4 rounded-xl max-h-[400px] overflow-y-scroll scrollbar-minimal tablet:text-base"
           >
             {currentMeal?.strInstructions}
           </div>

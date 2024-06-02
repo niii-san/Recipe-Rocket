@@ -4,7 +4,7 @@ import type { CategoryCard } from "../../Types";
 
 function Categories() {
   const [categories, setCategories] = useState<CategoryCard[] | []>([]);
-  console.log(categories);
+
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
