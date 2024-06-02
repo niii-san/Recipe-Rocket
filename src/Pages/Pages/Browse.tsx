@@ -19,7 +19,7 @@ function Browse() {
   return (
     <div>
       <div className="mt-6 mb-5 text-2xl">Showing results for: {cat} </div>
-      <div className="flex  flex-col gap-y-5 items-center ">
+      <div className="flex  flex-col gap-y-5 items-center tablet:flex-row tablet:flex-wrap tablet:justify-center tablet:gap-x-8 ">
         {browsedData?.map((item) => (
           <FoodCard key={item.idMeal} meal={item} />
         ))}
