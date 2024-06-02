@@ -14,6 +14,7 @@ import {
   About,
   Search,
   Browse,
+  Areas,
 } from "./Pages/index.ts";
 import Layout from "./Layout.tsx";
 const route = createBrowserRouter(
@@ -25,6 +26,7 @@ const route = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/search/:item" element={<Search />} />
       <Route path="/browse/:cat" element={<Browse />} />
+      <Route path="/area/:area" element={<Areas />} />
     </Route>
   )
 );

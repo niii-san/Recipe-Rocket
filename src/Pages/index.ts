@@ -6,5 +6,16 @@ import Recipes from "./Pages/Recipes";
 import About from "./Pages/About";
 import Search from "./Pages/Search";
 import Browse from "./Pages/Browse";
+import Areas from "./Pages/Areas";
 
-export { NavBody, SearchBar, Home, Categories, Recipes, About, Search, Browse };
+export {
+  NavBody,
+  SearchBar,
+  Home,
+  Categories,
+  Recipes,
+  About,
+  Search,
+  Browse,
+  Areas,
+};
