@@ -17,7 +17,7 @@ function Areas() {
   return (
     <div>
       <div className="text-2xl mt-6 mb-4 text-center">{area} Meals</div>
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 tablet:flex-row tablet:flex-wrap  tablet:justify-center">
         {data?.map((item) => (
           <FoodCard key={item.idMeal} meal={item} />
         ))}
