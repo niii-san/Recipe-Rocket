@@ -44,7 +44,7 @@ function Cook() {
           id="title-image-tags"
           className="flex flex-col items-center bg-Second text-Text rounded-xl "
         >
-          <div id="title" className="text-2xl py-2">
+          <div id="title" className="text-2xl py-2 pl-4">
             {currentMeal?.strMeal}
           </div>
           <div
@@ -61,6 +61,20 @@ function Cook() {
             </div>
           </div>
         </div>
+
+        <div
+          id="ingredients-measures"
+          className="bg-Second flex w-[96%] text-Text mt-8 rounded-xl"
+        >
+          <div id="ingredients" className=" w-[50%] p-3">
+            <h1 className="text-2xl border-b border-Third mb-3">Ingredients</h1>
+            <div>{renderIngredients()}</div>
+          </div>
+          <div id="measures" className=" w-[50%] border-l border-Third p-3">
+            <h1 className="text-2xl border-b border-Third mb-3">Measures</h1>
+            <div className="">{renderMeasures()}</div>
+          </div>
+        </div>
         <div id="instructions" className="w-[90%] mt-5">
           <div id="title" className="text-2xl">
             Instructions
@@ -70,19 +84,6 @@ function Cook() {
             className="bg-Second text-Text text-sm border border-Third p-4 rounded-xl max-h-[400px] overflow-y-scroll scrollbar-minimal"
           >
             {currentMeal?.strInstructions}
-          </div>
-        </div>
-        <div
-          id="ingredients-measures"
-          className="bg-Second flex w-[96%] text-Text mt-6 rounded-xl"
-        >
-          <div id="ingredients" className=" w-[50%] p-3">
-            <h1 className="text-2xl border-b border-Third mb-3">Ingredients</h1>
-            <div>{renderIngredients()}</div>
-          </div>
-          <div id="measures" className=" w-[50%] border-l border-Third p-3">
-            <h1 className="text-2xl border-b border-Third mb-3">Measures</h1>
-            <div className="">{renderMeasures()}</div>
           </div>
         </div>
       </div>
