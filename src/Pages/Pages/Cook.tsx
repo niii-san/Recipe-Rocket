@@ -17,7 +17,7 @@ function Cook() {
   }, [meal]);
   return (
     <>
-      <div className="flex flex-col items-center pt-5">
+      <div className="flex flex-col items-center pt-5 w-full ">
         <div
           id="title-image-tags"
           className="flex flex-col items-center bg-Second text-Text rounded-xl "
@@ -37,6 +37,17 @@ function Cook() {
             <div id="tag" className={tagStyle}>
               {currentMeal?.strArea}
             </div>
+          </div>
+        </div>
+        <div id="instructions" className="w-[90%] mt-5">
+          <div id="title" className="text-2xl">
+            Instructions
+          </div>
+          <div
+            id="instructionData"
+            className="bg-Second text-Text text-sm border border-Third p-4 rounded-xl max-h-[400px] overflow-y-scroll"
+          >
+            {currentMeal?.strInstructions}
           </div>
         </div>
       </div>
