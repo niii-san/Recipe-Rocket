@@ -4,10 +4,10 @@ import { FaXTwitter } from "react-icons/fa6";
 
 function Footer() {
   const navigate = useNavigate();
-  // const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-Second h-[350px] w-full pc:w-full mt-28 ">
+    <footer className="bg-Second h-[350px] w-full pc:w-full mt-28  text-Text">
       <div className="h-[55%] w-full  flex justify-evenly text-white text-sm border-b ">
         <div
           id="about"
@@ -54,6 +54,16 @@ function Footer() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="w-full flex justify-center text-2xl py-5  gap-2">
+        2024-{year} <span>@ Made by </span>{" "}
+        <span
+          className="hover:underline cursor-pointer hover:text-blue-400"
+          onClick={() => window.open("https://github.com/nishan812")}
+        >
+          {" "}
+          Nishan
+        </span>
       </div>
     </footer>
   );
