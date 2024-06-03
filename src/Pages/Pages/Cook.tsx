@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import type { Meal } from "../../Types";
+import Skeleton from "../../Components/Skeleton";
 
 function Cook() {
   const tagStyle =
@@ -45,19 +46,29 @@ function Cook() {
           className="flex flex-col items-center bg-Second text-Text rounded-xl min-w-[280px] "
         >
           <div id="title" className="text-2xl py-2 px-4">
-            {currentMeal?.strMeal}
+            {currentMeal ? (
+              currentMeal?.strMeal
+            ) : (
+              <Skeleton className="w-28 h-8" />
+            )}
           </div>
-          <div
-            id="image"
-            className="h-[250px] w-[250px] bg-cover"
-            style={{ backgroundImage: `url("${currentMeal?.strMealThumb}")` }}
-          ></div>
+
+          {currentMeal ? (
+            <div
+              id="image"
+              className="h-[250px] w-[250px] bg-cover"
+              style={{ backgroundImage: `url("${currentMeal?.strMealThumb}")` }}
+            ></div>
+          ) : (
+            <Skeleton className="h-[250px] w-[250px] rounded-none" />
+          )}
+
           <div id="tags" className="flex py-4 gap-x-4">
             <div id="tag" className={tagStyle}>
-              {currentMeal?.strCategory}
+              {currentMeal ? currentMeal.strCategory : "XXXXX"}
             </div>
             <div id="tag" className={tagStyle}>
-              {currentMeal?.strArea}
+              {currentMeal ? currentMeal.strArea : "XXXXX"}
             </div>
           </div>
         </div>
@@ -68,11 +79,19 @@ function Cook() {
         >
           <div id="ingredients" className=" w-[50%] p-3">
             <h1 className="text-2xl border-b border-Third mb-3">Ingredients</h1>
-            <div>{renderIngredients()}</div>
+            <div>
+              {currentMeal
+                ? renderIngredients()
+                : [...Array(10)].map((_, i) => <div key={i}>xxxx</div>)}
+            </div>
           </div>
           <div id="measures" className=" w-[50%] border-l border-Third p-3">
             <h1 className="text-2xl border-b border-Third mb-3">Measures</h1>
-            <div className="">{renderMeasures()}</div>
+            <div>
+              {currentMeal
+                ? renderMeasures()
+                : [...Array(10)].map((_, i) => <div key={i}>xxxx</div>)}
+            </div>
           </div>
         </div>
         <div
@@ -86,7 +105,9 @@ function Cook() {
             id="instructionData"
             className="bg-Second text-Text text-sm border border-Third p-4 rounded-xl max-h-[400px] overflow-y-scroll scrollbar-minimal tablet:text-base tablet:max-w-[800px] "
           >
-            {currentMeal?.strInstructions}
+            {currentMeal
+              ? currentMeal.strInstructions
+              : "xxxxxx xxxxx xxxxxxxxxxxxxx xxxxxxxxx xxxxxxxxx xxx xxxxxxxxxxx xxx xxxxxxxxx xxxxxxx xxxxxxx xxxxx xxxxxx xxx  xxxxx xxxx  xxxxx xxxx xxxx xxx xxxxxxxxxxxxxxx xxxxxx xxxxxx xxxxxxxxxxx xxxxxxxxx xxxxxx xxxxx xxxx xxxxxx xxxxx xxxxxxxxxxxxxx xxxxxxxxx xxxxxxxxx xxx xxxxxxxxxxx xxx xxxxxxxxx xxxxxxx xxxxxxx xxxxx xxxxxx xxx  xxxxx xxxx  xxxxx xxxx xxxx xxx xxxxxxxxxxxxxxx xxxxxx xxxxxx xxxxxxxxxxx xxxxxxxxx xxxxxx xxxxx xxxx xxxx xxx"}
           </div>
         </div>
       </div>
