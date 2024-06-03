@@ -3,6 +3,7 @@ import Block from "../../Components/Block";
 import { useEffect, useState } from "react";
 import type { Meal, MealCard } from "../../Types";
 import FoodCard from "../../Components/FoodCard";
+import Skeleton from "../../Components/Skeleton";
 
 function Home() {
   const [randomMeal, setRandomMeal] = useState<Meal | null>(null);
@@ -10,7 +11,6 @@ function Home() {
   const [indianMeals, setIndianMeals] = useState<MealCard[] | []>([]);
 
   const [reloadRand, setReloadRand] = useState<boolean>(false);
-
 
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/random.php")
@@ -54,9 +54,13 @@ function Home() {
           id="meals"
           className="flex flex-col items-center gap-y-5 py-5 tablet:flex-row tablet:flex-wrap tablet:justify-evenly tablet:gap-x-4"
         >
-          {indianMeals.map((meal) => (
-            <FoodCard key={meal.idMeal} meal={meal} />
-          ))}
+          {indianMeals.length > 0
+            ? indianMeals.map((meal) => (
+                <FoodCard key={meal.idMeal} meal={meal} />
+              ))
+            : [...Array(10)].map((_, i) => (
+                <Skeleton key={i} className="w-[90%] max-w-[500px] h-32" />
+              ))}
         </div>
       </div>
     </div>

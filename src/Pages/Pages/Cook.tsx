@@ -64,7 +64,7 @@ function Cook() {
 
         <div
           id="ingredients-measures"
-          className="bg-Second flex w-[96%] text-Text mt-8 rounded-xl"
+          className="bg-Second flex w-[96%] text-Text mt-8 rounded-xl tablet:max-w-[800px]"
         >
           <div id="ingredients" className=" w-[50%] p-3">
             <h1 className="text-2xl border-b border-Third mb-3">Ingredients</h1>
@@ -75,13 +75,16 @@ function Cook() {
             <div className="">{renderMeasures()}</div>
           </div>
         </div>
-        <div id="instructions" className="w-[90%] mt-5">
-          <div id="title" className="text-2xl">
+        <div
+          id="instructions"
+          className="w-[90%] mt-5 flex flex-col items-center"
+        >
+          <div id="title" className="text-2xl tablet:text-4xl">
             Instructions
           </div>
           <div
             id="instructionData"
-            className="bg-Second text-Text text-sm border border-Third p-4 rounded-xl max-h-[400px] overflow-y-scroll scrollbar-minimal tablet:text-base"
+            className="bg-Second text-Text text-sm border border-Third p-4 rounded-xl max-h-[400px] overflow-y-scroll scrollbar-minimal tablet:text-base tablet:max-w-[800px] "
           >
             {currentMeal?.strInstructions}
           </div>

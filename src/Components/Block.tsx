@@ -1,6 +1,7 @@
 import type { Meal } from "../Types";
 import { MdNavigateNext } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import Skeleton from "./Skeleton";
 
 function Block({
   meal,
@@ -22,7 +23,7 @@ function Block({
   if (!meal) {
     return (
       <>
-        <div className="h-[400px] tablet:w-[590px] bg-gray-400 rounded-xl"></div>
+        <Skeleton className="h-[400px] tablet:w-[590px] rounded-xl" />
       </>
     );
   }
