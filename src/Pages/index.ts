@@ -8,6 +8,7 @@ import Search from "./Pages/Search";
 import Browse from "./Pages/Browse";
 import Areas from "./Pages/Areas";
 import Cook from "./Pages/Cook";
+import Footer from "./Footer/Footer";
 
 export {
   NavBody,
@@ -19,5 +20,6 @@ export {
   Search,
   Browse,
   Areas,
-  Cook
+  Cook,
+  Footer
 };

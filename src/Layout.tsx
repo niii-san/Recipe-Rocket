@@ -1,14 +1,13 @@
 import { Outlet } from "react-router-dom";
-import { NavBody, SearchBar } from "./Pages";
-
+import { NavBody, SearchBar, Footer } from "./Pages";
 
 function Layout() {
   return (
     <>
       <NavBody />
       <SearchBar />
-
       <Outlet />
+      <Footer />
     </>
   );
 }

@@ -27,8 +27,8 @@ function NavBar() {
   ];
 
   return (
-    <div className=" container  w-full  flex justify-center  ">
-      <ul className="py-3 text-sm flex justify-center w-full gap-2  bg-Second rounded-xl tablet:w-auto tablet:px-8 tablet:text-base tablet:gap-6">
+    <div className="   w-full  flex justify-center  ">
+      <ul className="  py-3 text-sm flex justify-center w-full gap-2  bg-Second rounded-xl tablet:w-auto tablet:px-8 tablet:text-base tablet:gap-6">
         {navItems.map((item) => (
           <li
             key={item.id}

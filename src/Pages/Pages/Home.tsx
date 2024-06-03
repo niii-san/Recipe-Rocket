@@ -29,7 +29,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="min-h-[800px] w-full bg-bodyBg">
+    <div className="min-h-[800px] w-full bg-bodyBg container">
       <div id="confused" className="flex flex-col items-center ">
         <div
           id="text"

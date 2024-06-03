@@ -40,7 +40,7 @@ function Cook() {
   };
   return (
     <>
-      <div className="flex flex-col items-center pt-5 w-full pb-72 ">
+      <div className="flex flex-col items-center pt-5 w-full pb-72  container">
         <div
           id="title-image-tags"
           className="flex flex-col items-center bg-Second text-Text rounded-xl min-w-[280px] "

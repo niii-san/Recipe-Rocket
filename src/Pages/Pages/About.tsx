@@ -1,9 +1,9 @@
 function About() {
   return (
-    <div className="pt-10 mx-4">
+    <div className="pt-10 mx-4 ">
       <div
         id="paragraph"
-        className="text-sm flex flex-col gap-4 text-Text bg-Second p-5 rounded-xl tablet:text-2xl"
+        className="text-sm flex flex-col gap-4 text-Text bg-Second p-5 rounded-xl tablet:text-2xl container"
       >
         <p>
           Welcome to Recipe Rocket, your go-to destination for discovering and
@@ -35,7 +35,7 @@ function About() {
       </div>
       <div
         id="api-github"
-        className="bg-Second mt-6 rounded-xl p-5 text-lg text-Text mb-20 tablet:text-2xl "
+        className="bg-Second mt-6 rounded-xl p-5 text-lg text-Text mb-20 tablet:text-2xl container "
       >
         <div>
           <span>API- </span>

@@ -17,7 +17,7 @@ function Search() {
   }, [item]);
   return (
     <>
-      <div>
+      <div className="container">
         <div className="text-2xl mt-4">Showing Results for: {item}</div>
         <div
           id="items"
