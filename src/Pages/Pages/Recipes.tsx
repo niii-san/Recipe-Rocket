@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Area } from "../../Types";
 import AreaCard from "../../Components/AreaCard";
+import Skeleton from "../../Components/Skeleton";
 
 function Recipes() {
   const [areas, SetAreas] = useState<Area[] | []>([]);
@@ -19,9 +20,11 @@ function Recipes() {
         Areas
       </div>
       <div className="flex flex-col gap-y-6 items-center py-5 tablet:flex-row tablet:flex-wrap tablet:gap-x-6 tablet:justify-center">
-        {areas.map((data) => (
-          <AreaCard key={data.strArea} area={data} />
-        ))}
+        {areas.length > 0
+          ? areas.map((data) => <AreaCard key={data.strArea} area={data} />)
+          : [...Array(29)].map((_, i) => (
+              <Skeleton key={i} className="w-[300px] h-10 rounded-xl" />
+            ))}
       </div>
     </>
   );
