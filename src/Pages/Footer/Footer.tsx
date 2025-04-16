@@ -59,7 +59,7 @@ function Footer() {
         2024-{year} <span>@ Made by </span>{" "}
         <span
           className="hover:underline cursor-pointer hover:text-blue-400"
-          onClick={() => window.open("https://github.com/nishan812")}
+          onClick={() => window.open("https://github.com/niii-san")}
         >
           {" "}
           Nishan

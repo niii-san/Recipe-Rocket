@@ -18,9 +18,9 @@ export default {
 
       // 9EB23B
       colors: {
-        bodyBg: "#FFB000",
-        Second: "#1A5D1A ",
-        Third: "#AED2FF",
+        bodyBg: "#",
+        Second: "#B7B1F2",
+        Third: "#FBF3B9",
         Text: "#F6F5F5",
       },
     },
